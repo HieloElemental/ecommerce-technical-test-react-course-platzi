@@ -18,28 +18,46 @@ import "./App.css";
 
 const AppRoutes = () => {
   return useRoutes([
-    { path: "/React-Vite-Tailwind-Platzi/", element: <Home /> },
     {
-      path: "/React-Vite-Tailwind-Platzi/electronics",
+      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/",
+      element: <Home />,
+    },
+    {
+      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/electronics",
       element: <Home category='electronics' />,
     },
     {
-      path: "/React-Vite-Tailwind-Platzi/jewelery",
+      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/jewelery",
       element: <Home category='jewelery' />,
     },
     {
-      path: "/React-Vite-Tailwind-Platzi/mens-clothing",
+      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/mens-clothing",
       element: <Home category={`men's clothing`} />,
     },
     {
-      path: "/React-Vite-Tailwind-Platzi/womens-clothing",
+      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/womens-clothing",
       element: <Home category={`women's clothing`} />,
     },
-    { path: "/React-Vite-Tailwind-Platzi/my-account", element: <MyAccount /> },
-    { path: "/React-Vite-Tailwind-Platzi/my-orders", element: <MyOrders /> },
-    { path: "/React-Vite-Tailwind-Platzi/my-orders/:id", element: <MyOrder /> },
-    { path: "/React-Vite-Tailwind-Platzi/sign-in", element: <SignIn /> },
-    { path: "/React-Vite-Tailwind-Platzi/*", element: <NotFound /> },
+    {
+      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/my-account",
+      element: <MyAccount />,
+    },
+    {
+      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/my-orders",
+      element: <MyOrders />,
+    },
+    {
+      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/my-orders/:id",
+      element: <MyOrder />,
+    },
+    {
+      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/sign-in",
+      element: <SignIn />,
+    },
+    {
+      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/*",
+      element: <NotFound />,
+    },
   ]);
 };
 

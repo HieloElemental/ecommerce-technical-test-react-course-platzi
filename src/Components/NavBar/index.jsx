@@ -6,20 +6,38 @@ import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 import { ShoppingCartContext } from "../../Contexts/ShoppingCartProvider";
 
 const navProductCategories = [
-  { path: "/React-Vite-Tailwind-Platzi/", text: "All" },
-  { path: "/React-Vite-Tailwind-Platzi/electronics", text: "Electronics" },
-  { path: "/React-Vite-Tailwind-Platzi/jewelery", text: "Jewelery" },
-  { path: "/React-Vite-Tailwind-Platzi/mens-clothing", text: "Men's Clothing" },
+  { path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/", text: "All" },
   {
-    path: "/React-Vite-Tailwind-Platzi/womens-clothing",
+    path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/electronics",
+    text: "Electronics",
+  },
+  {
+    path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/jewelery",
+    text: "Jewelery",
+  },
+  {
+    path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/mens-clothing",
+    text: "Men's Clothing",
+  },
+  {
+    path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/womens-clothing",
     text: "Women's Clothing",
   },
 ];
 
 const navRightPages = [
-  { path: "/React-Vite-Tailwind-Platzi/my-orders", text: "My Orders" },
-  { path: "/React-Vite-Tailwind-Platzi/my-account", text: "My Account" },
-  { path: "/React-Vite-Tailwind-Platzi/sign-in", text: "Sign In" },
+  {
+    path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/my-orders",
+    text: "My Orders",
+  },
+  {
+    path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/my-account",
+    text: "My Account",
+  },
+  {
+    path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/sign-in",
+    text: "Sign In",
+  },
 ];
 
 const NavItem = ({ path, text }) => (
@@ -52,7 +70,9 @@ const NavBar = () => {
     <nav className='bg-white border-gray-200 dark:bg-gray-900 dark:text-white flex justify-between items-center fixed z-20 top-0 w-full py-5 px-8 text-sm font-light'>
       <ul className='gap-3 flex items-center'>
         <li className='font-semibold'>
-          <NavLink to={"/React-Vite-Tailwind-Platzi/"}>Shopi</NavLink>
+          <NavLink to={"/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/"}>
+            Shopi
+          </NavLink>
         </li>
         {renderNavItems(navProductCategories)}
       </ul>

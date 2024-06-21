@@ -1,8 +1,8 @@
 {
-  "name": "react-vite-tailwind-platzi",
+  "name": "prueba-tecnica-e-commerce-profesional-react-platzi",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/HieloElemental/React-Vite-Tailwind-Platzi/",
+  "homepage": "https://github.com/HieloElemental/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
