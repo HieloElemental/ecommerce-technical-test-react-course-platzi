@@ -11,6 +11,7 @@ import { MyOrder } from "../MyOrder";
 import { MyOrders } from "../MyOrders";
 import { NotFound } from "../NotFound";
 import { SignIn } from "../SignIn";
+import { Login } from "../Login";
 import { NavBar } from "../../Components/NavBar";
 import { Layout } from "../../Containers/Layout";
 
@@ -53,6 +54,14 @@ const AppRoutes = () => {
     {
       path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/sign-in",
       element: <SignIn />,
+    },
+    {
+      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/sign-out",
+      element: <Login />,
+    },
+    {
+      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/login",
+      element: <Login />,
     },
     {
       path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/*",
