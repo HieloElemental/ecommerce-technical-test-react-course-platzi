@@ -16,6 +16,7 @@ import { NavBar } from "../../Components/NavBar";
 import { Layout } from "../../Containers/Layout";
 
 import "./App.css";
+import { UserProvider } from "../../Contexts/UserProvider";
 
 const AppRoutes = () => {
   return useRoutes([
@@ -72,20 +73,22 @@ const AppRoutes = () => {
 
 const App = () => {
   return (
-    <ShoppingCartProvider>
-      <ProductDetailProvider>
-        <OrdersProvider>
-          <BrowserRouter>
-            <NavBar />
-            <ProductDetail />
-            <CheckoutMenu />
-            <Layout>
-              <AppRoutes />
-            </Layout>
-          </BrowserRouter>
-        </OrdersProvider>
-      </ProductDetailProvider>
-    </ShoppingCartProvider>
+    <UserProvider>
+      <ShoppingCartProvider>
+        <ProductDetailProvider>
+          <OrdersProvider>
+            <BrowserRouter>
+              <NavBar />
+              <ProductDetail />
+              <CheckoutMenu />
+              <Layout>
+                <AppRoutes />
+              </Layout>
+            </BrowserRouter>
+          </OrdersProvider>
+        </ProductDetailProvider>
+      </ShoppingCartProvider>
+    </UserProvider>
   );
 };
 
