@@ -7,6 +7,7 @@ import { OrderCard } from "../OrderCard";
 
 import { calcTotalPrice } from "../../utils/calcTotalPrice";
 import { Link } from "react-router-dom";
+import { getUrl } from "../../utils/getUrl";
 
 const CheckoutMenu = () => {
   const { isCheckoutOpen, onCloseCheckout, cartProducts, onDeleteHandler } =
@@ -45,7 +46,7 @@ const CheckoutMenu = () => {
             ${calcTotalPrice(cartProducts)}
           </span>
         </p>
-        <Link to='/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/my-orders/last'>
+        <Link to={getUrl("/my-orders/last")}>
           <button
             className='bg-white py-3 text-black w-full rounded-lg'
             onClick={handleCheckoutOrder}
