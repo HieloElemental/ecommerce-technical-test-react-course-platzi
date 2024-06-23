@@ -1,9 +1,19 @@
 import { useContext } from "react";
 import { Layout } from "../../Containers/Layout";
 import { UserContext } from "../../Contexts/UserProvider";
+import { useNavigate } from "react-router-dom";
+
+import { getUrl } from "../../utils/getUrl";
 
 const MyAccount = () => {
-  const { user } = useContext(UserContext);
+  const { user, logoutUser } = useContext(UserContext);
+  const navigate = useNavigate();
+
+  const onLogoutHandler = () => {
+    logoutUser();
+    navigate(getUrl("/login"));
+  };
+
   return (
     <Layout>
       <div className='flex flex-col w-80'>
@@ -16,7 +26,10 @@ const MyAccount = () => {
           <span className='font-light text-sm'>Password: </span>
           <span>{user?.password}</span>
         </p>
-        <button className='border border-white disabled:text-white/40 w-full disabled:border-white/40 rounded-lg mt-6 py-3'>
+        <button
+          onClick={onLogoutHandler}
+          className='border border-white disabled:text-white/40 w-full disabled:border-white/40 rounded-lg mt-6 py-3'
+        >
           Log Out
         </button>
       </div>

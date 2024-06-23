@@ -17,57 +17,28 @@ import { Layout } from "../../Containers/Layout";
 
 import "./App.css";
 import { UserProvider } from "../../Contexts/UserProvider";
+import { getUrl } from "../../utils/getUrl";
 
 const AppRoutes = () => {
   return useRoutes([
+    { path: getUrl("/"), element: <Home /> },
+    { path: getUrl("/electronics"), element: <Home category='electronics' /> },
+    { path: getUrl("/jewelery"), element: <Home category='jewelery' /> },
     {
-      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/",
-      element: <Home />,
-    },
-    {
-      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/electronics",
-      element: <Home category='electronics' />,
-    },
-    {
-      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/jewelery",
-      element: <Home category='jewelery' />,
-    },
-    {
-      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/mens-clothing",
+      path: getUrl("/mens-clothing"),
       element: <Home category={`men's clothing`} />,
     },
     {
-      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/womens-clothing",
+      path: getUrl("/womens-clothing"),
       element: <Home category={`women's clothing`} />,
     },
-    {
-      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/my-account",
-      element: <MyAccount />,
-    },
-    {
-      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/my-orders",
-      element: <MyOrders />,
-    },
-    {
-      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/my-orders/:id",
-      element: <MyOrder />,
-    },
-    {
-      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/sign-in",
-      element: <SignIn />,
-    },
-    {
-      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/sign-out",
-      element: <Login />,
-    },
-    {
-      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/login",
-      element: <Login />,
-    },
-    {
-      path: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/*",
-      element: <NotFound />,
-    },
+    { path: getUrl("/my-account"), element: <MyAccount /> },
+    { path: getUrl("/my-orders"), element: <MyOrders /> },
+    { path: getUrl("/my-orders/:id"), element: <MyOrder /> },
+    { path: getUrl("/sign-in"), element: <SignIn /> },
+    { path: getUrl("/sign-out"), element: <Login /> },
+    { path: getUrl("/login"), element: <Login /> },
+    { path: getUrl("/*"), element: <NotFound /> },
   ]);
 };
 

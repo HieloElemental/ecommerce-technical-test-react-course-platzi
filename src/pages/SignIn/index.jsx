@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { validateEmail } from "../../utils/validateEmail";
 import { Alert } from "../../Components/Alert";
 import { UserContext } from "../../Contexts/UserProvider";
+import { getUrl } from "../../utils/getUrl";
 
 const SignIn = () => {
   const { signUpUser } = useContext(UserContext);
@@ -33,7 +34,7 @@ const SignIn = () => {
       return;
     }
     signUpUser(form);
-    navigate("/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/");
+    navigate(getUrl("/"));
   };
 
   return (
@@ -80,7 +81,7 @@ const SignIn = () => {
         <div className='text-center'>
           Already have an account?{" "}
           <span className='font-bold underline'>
-            <Link>Log in</Link>
+            <Link to={getUrl("/login")}>Log in</Link>
           </span>
         </div>
       </form>

@@ -6,6 +6,8 @@ import { Layout } from "../../Containers/Layout";
 import { OrdersContext } from "../../Contexts/OrdersProvider";
 import { OrderCard } from "../../Components/OrderCard";
 
+import { getUrl } from "../../utils/getUrl";
+
 const MyOrder = () => {
   const { orders } = useContext(OrdersContext);
   const currentPath = window.location.pathname.split("/")[3];
@@ -17,10 +19,7 @@ const MyOrder = () => {
   return (
     <Layout>
       <div className='flex items-center justify-center relative w-80 mb-6'>
-        <Link
-          to='/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/my-orders'
-          className='absolute left-0'
-        >
+        <Link to={getUrl("/my-orders")} className='absolute left-0'>
           <ChevronLeftIcon className='h-6 w-6 text-white cursor-pointer' />
         </Link>
         <h1>My Order</h1>

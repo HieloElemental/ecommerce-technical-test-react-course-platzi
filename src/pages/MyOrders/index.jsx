@@ -5,6 +5,8 @@ import { OrdersCard } from "../../Components/OrdersCard";
 import { OrdersContext } from "../../Contexts/OrdersProvider";
 import { Link } from "react-router-dom";
 
+import { getUrl } from "../../utils/getUrl";
+
 const MyOrders = () => {
   const { orders } = useContext(OrdersContext);
 
@@ -14,10 +16,7 @@ const MyOrders = () => {
 
       {orders.map(({ totalPrice, totalProducts, date }, index) => {
         return (
-          <Link
-            to={`/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/my-orders/${index}`}
-            key={`${date}${index}`}
-          >
+          <Link to={getUrl(`/my-orders/${index}`)} key={`${date}${index}`}>
             <OrdersCard
               totalPrice={totalPrice}
               totalProducts={totalProducts}

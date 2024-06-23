@@ -28,8 +28,10 @@ const useLocalStorage = ({ itemName, initialValue }) => {
   }, [itemName, error]);
 
   useEffect(() => {
-    localStorage.setItem(itemName, JSON.stringify(item));
-  }, [itemName, item]);
+    if (!isLoading) {
+      localStorage.setItem(itemName, JSON.stringify(item));
+    }
+  }, [item]);
 
   const clearError = () => {
     setError(false);

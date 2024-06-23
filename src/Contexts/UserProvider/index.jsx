@@ -23,9 +23,23 @@ const UserProvider = ({ children }) => {
     setUser({ isLoggedIn: true, data: user });
   };
 
+  const logoutUser = () => {
+    setUser({ isLoggedIn: false, data: user.data });
+  };
+
+  const loginUser = () => {
+    setUser({ isLoggedIn: true, data: user.data });
+  };
+
   return (
     <UserContext.Provider
-      value={{ user: user.data, isLoggedIn: user.isLoggedIn, signUpUser }}
+      value={{
+        user: user.data,
+        isLoggedIn: user.isLoggedIn,
+        signUpUser,
+        logoutUser,
+        loginUser,
+      }}
     >
       {isLoading ? (
         <LoadingPage />
