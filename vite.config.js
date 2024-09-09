@@ -4,5 +4,5 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi/",
+  base: "/ecommerce-technical-test-react-course-platzi/",
 });
