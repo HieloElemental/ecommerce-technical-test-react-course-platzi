@@ -1,4 +1,4 @@
-const siteUrl = "/Prueba-Tecnica-E-commerce-Profesional-React-Platzi";
+const siteUrl = "/ecommerce-technical-test-react-course-platzi";
 
 const getUrl = (end) => {
   return `${siteUrl}${end}`;
