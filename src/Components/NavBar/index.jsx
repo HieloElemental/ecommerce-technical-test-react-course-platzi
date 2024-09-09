@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import { ShoppingCartIcon, Bars3Icon } from "@heroicons/react/24/solid";
@@ -77,7 +77,7 @@ const NavBar = () => {
       </button>
       <div
         className={`dark:bg-gray-800 w-8/12 min-w-80 fixed top-20 h-full flex flex-col justify-between pb-20 border-t border-gray-700 ${
-          isResponsiveOpen ? "left-0" : "-left-full"
+          isResponsiveOpen ? "left-0 md:left-auto" : "-left-full md:left-auto"
         } md:relative md:flex md:w-11/12 md:justify-between md:flex-row md:dark:bg-transparent md:pb-0 md:top-0 md:border-none`}
         id='navbar-default'
       >
